@@ -5,10 +5,6 @@ The E-commerce website is a full-stack application built using React with Vite a
 
   <img  src="public/assets/Screenshots/0.png" alt="Home">
 
-## [🌟Live Website🌟](https://e-commerce-mansy.vercel.app)
-
-## [🌟Design on Figma 🌟](https://www.figma.com/file/yn2DFQJla0UiSMvomFsqwT/E-Commerce-Website-%D9%90Almdrasa?type=design&mode=design&t=fqPRRAQH5lDJGmoY-0)
-
 ## Table of Contents
 
 - [Features](#features)
@@ -112,9 +108,3 @@ To set up and run the project locally, follow these steps:
 
 
 
-## Contact
-
-- [Author](https://github.com/MMansy19)
-- [Website](https://mahmoud-mansy-portfolio.netlify.app/)
-- [Email](mailto:mahmoud2abdalfattah@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/mahmoud-mansy-a189a5232)
