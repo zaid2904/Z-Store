@@ -66,10 +66,10 @@ const Contact = () => {
               <p className="text-sm">{i18n.t("contactPage.fillForm")}</p>
 
               <p className="text-sm">
-                {i18n.t("contactPage.emails")}: customer@exclusive.com
+                {i18n.t("contactPage.emails")}: customer@zstore.com
               </p>
               <p className="text-sm">
-                {i18n.t("contactPage.emails")}: support@exclusive.com
+                {i18n.t("contactPage.emails")}: support@zstore.com
               </p>
             </div>
           </div>

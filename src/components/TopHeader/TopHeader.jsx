@@ -2,6 +2,7 @@
 import ChangeLang from "./ChangeLang";
 import i18n from "../common/components/LangConfig";
 import { Link } from "react-router-dom";
+import ThemeSwitcher from "../Header/ThemeSwitcher";
 
 const TopHeader = () => {
   return (
@@ -20,7 +21,10 @@ const TopHeader = () => {
             </button>
           </Link>
         </div>
-        <ChangeLang />
+        <div className="flex items-center gap-3">
+          <ThemeSwitcher />
+          <ChangeLang />
+        </div>
       </div>
     </div>
   );

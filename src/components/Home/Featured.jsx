@@ -2,31 +2,39 @@ import RedTitle from "../common/components/RedTitle";
 import i18n from "../common/components/LangConfig";
 import { Link } from "react-router-dom";
 import { ITEMS } from "../common/functions/items";
+import { motion } from "framer-motion";
 
 const Featured = () => {
   const ShopNow = () => {
     return (
-      <button className="mb-4 md:mb-0 flex gap-2 underline underline-offset-8 py-2  focus:underline-offset-2  ease-in-out  duration-300 transform hover:translate-x-4">
-        <span> {i18n.t("featured.shopNow")}</span>
-        <svg
-          className="mt-1 "
-          width="24"
-          height="24"
+      <motion.button
+        whileHover={{ x: 4 }}
+        className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors duration-300 group"
+      >
+        <span className="border-b border-emerald-400 group-hover:border-emerald-300 font-semibold">
+          {i18n.t("featured.shopNow")}
+        </span>
+        <motion.svg
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          initial={{ x: 0 }}
+          whileHover={{ x: 4 }}
+          transition={{ duration: 0.2 }}
         >
           <path
             d="M3.5 12H20M20 12L13 5M20 12L13 19"
-            stroke="#FAFAFA"
+            stroke="currentColor"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-        </svg>
-      </button>
+        </motion.svg>
+      </motion.button>
     );
   };
+
   const playstationItem = ITEMS.find(
     (item) => item.title === i18n.t("itemsArray.18.title")
   );
@@ -41,149 +49,210 @@ const Featured = () => {
   );
 
   return (
-    <div className="flex flex-col my-24 mx-auto">
-      <div className="mx-2">
-        <RedTitle title={i18n.t("featured.redTitle")} />
-        <h2 className="text-2xl md:text-3xl font-semibold mb-14">
-          {i18n.t("featured.title")}
-        </h2>
-      </div>
-      <div className="flex flex-col xl:flex-row gap-8">
-        <div className="bg-black rounded md:pt-12 md:px-8 md:h-[600px] md:w-[570px]">
-          <div className=" text-white relative flex gap-10  md:mt-10 items-center justify-center flex-col-reverse md:flex-row md:w-[511px] md:h-[511px] sm:h-[500px] h-[380px]">
-            <div className="absolute inset-0 z-0 bg-no-repeat bg-center bg-cover">
-              <Link
-                to={{ pathname: `/allProducts/${playstationItem.title}` }}
-                key={playstationItem.id}
-              >
-                <img
-                  loading="lazy"
-                  className="w-full h-full transition-transform duration-300 transform  hover:-translate-y-4  hover:scale-101 hover:motion-safe:animate-pulse opacity-50 hover:opacity-100"
-                  src={playstationItem.imageSrc}
-                  alt={playstationItem.title}
-                />
-              </Link>
-            </div>
-            <div className="flex transform flex-col gap-1 md:gap-4 mt-auto md:mr-auto  w-[270px] md:mb-8  items-center md:items-start justify-end">
-              <h2 className=" text-center md:text-start text-lg md:text-2xl font-semibold font-inter">
-                {i18n.t("featured.playStation.title")}
-              </h2>
-              <p className=" text-center md:text-start text-sm ">
-                {i18n.t("featured.playStation.description")}
-              </p>
-              <Link
-                to={{ pathname: `/allProducts/${playstationItem.title}` }}
-                key={playstationItem.id}
-              >
-                <ShopNow />
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col gap-8">
-          <div className="bg-black rounded h-[284px] md:w-[570px]">
-            <div className="text-white relative flex items-center justify-center flex-col-reverse md:flex-row w-full h-full">
-              <div className="overflow-hidden absolute bg-no-repeat bg-center bg-cover transition-transform duration-300 transform hover:scale-105 p-10">
+    <section className="section-padding bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <div className="max-w-7xl mx-auto container-padding">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <RedTitle title={i18n.t("featured.redTitle")} />
+          <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mt-6">
+            {i18n.t("featured.title")}
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+          {/* PlayStation Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative card-interactive bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl overflow-hidden group"
+          >
+            <div className="relative h-[400px] lg:h-[500px] flex items-end p-8">
+              {/* Background pattern */}
+              <div className="absolute inset-0 bg-pattern opacity-10"></div>
+              
+              <div className="absolute top-8 right-8 z-20">
                 <Link
-                  to={{
-                    pathname: `/allProducts/${womenCollectionsItem.title}`,
-                  }}
-                  key={womenCollectionsItem.id}
+                  to={{ pathname: `/allProducts/${playstationItem.title}` }}
+                  key={playstationItem.id}
                 >
-                  <img
+                  <motion.img
+                    whileHover={{ scale: 1.05, rotate: 2 }}
+                    transition={{ duration: 0.3 }}
                     loading="lazy"
-                    className="w-full h-full max-w-[400px] transition-transform duration-300 transform  hover:-translate-y-1 hover:scale-102 hover:motion-safe:animate-pulse object-cover opacity-50 hover:opacity-100"
-                    src={womenCollectionsItem.imageSrc}
-                    alt={womenCollectionsItem.title}
+                    className="max-w-xs w-full h-auto object-contain drop-shadow-2xl"
+                    src={playstationItem.imageSrc}
+                    alt={playstationItem.title}
                   />
                 </Link>
               </div>
-              <div className="flex transform flex-col gap-1 md:gap-4 mt-auto md:mr-auto md:pl-8 md:pb-4 items-center w-[300px]">
-                <h2 className="text-center md:text-start text-lg md:text-2xl font-semibold font-inter">
-                  {i18n.t("featured.WomenCollections.title")}
-                </h2>
-                <p className="text-center md:text-start text-sm">
-                  {i18n.t("featured.WomenCollections.description")}
+              
+              <div className="relative z-10 text-white max-w-sm">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                  {i18n.t("featured.playStation.title")}
+                </h3>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  {i18n.t("featured.playStation.description")}
                 </p>
                 <Link
-                  to={{
-                    pathname: `/allProducts/${womenCollectionsItem.title}`,
-                  }}
-                  key={womenCollectionsItem.id}
+                  to={{ pathname: `/allProducts/${playstationItem.title}` }}
+                  key={playstationItem.id}
                 >
                   <ShopNow />
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="bg-black rounded md:px-6  h-[284px] min-[400px]:max-sm:h-[450px] md:w-[270px]">
-              <div className=" text-white relative flex md:gap-10 md:mt-10 items-center justify-center flex-col-reverse md:flex-row w-full h-full md:h-[221px] ">
-                <div className="px-16 py-4 min-[400px]:px-auto sm:p-0 overflow-hidden absolute inset-0 z-0 bg-no-repeat bg-center bg-cover transition-transform duration-300 transform hover:scale-105   ">
-                  <Link
-                    to={{ pathname: `/allProducts/${speakersItem.title}` }}
-                    key={speakersItem.id}
-                  >
-                    <img
-                      loading="lazy"
-                      className="w-full h-full max-w-[400px] transition-transform duration-300 transform  hover:-translate-y-1 hover:scale-102 hover:motion-safe:animate-pulse object-cover opacity-50 hover:opacity-100"
-                      src={speakersItem.imageSrc}
-                      alt={speakersItem.title}
-                    />
-                  </Link>
-                </div>
-                <div className="flex transform flex-col gap-1 md:gap-2 mt-auto md:mr-auto md:pl-4 w-[270px] items-center md:items-start md:justify-end">
-                  <h2 className=" text-center md:text-start text-lg md:text-2xl font-semibold font-inter">
-                    {i18n.t("featured.speakers.title")}
-                  </h2>
-                  <p className=" text-center md:text-start text-sm ">
-                    {i18n.t("featured.speakers.description")}
+          {/* Right Column */}
+          <div className="space-y-8">
+            {/* Women's Collections */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative card-interactive bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl overflow-hidden group h-[240px]"
+            >
+              <div className="relative h-full flex items-center justify-between p-8">
+                {/* Background pattern */}
+                <div className="absolute inset-0 bg-pattern opacity-10"></div>
+                
+                <div className="relative z-10 text-white flex-1">
+                  <h3 className="text-xl lg:text-2xl font-bold mb-3">
+                    {i18n.t("featured.WomenCollections.title")}
+                  </h3>
+                  <p className="text-slate-300 mb-4 text-sm">
+                    {i18n.t("featured.WomenCollections.description")}
                   </p>
                   <Link
-                    to={{ pathname: `/allProducts/${speakersItem.title}` }}
-                    key={speakersItem.id}
+                    to={{
+                      pathname: `/allProducts/${womenCollectionsItem.title}`,
+                    }}
+                    key={womenCollectionsItem.id}
                   >
                     <ShopNow />
                   </Link>
                 </div>
-              </div>
-            </div>
-            <div className="bg-black rounded  md:px-6 h-[284px] min-[400px]:max-sm:h-[450px] md:w-[270px]">
-              <div className=" text-white relative flex md:gap-10 md:mt-10 items-center justify-center flex-col-reverse md:flex-row w-full h-full md:h-[221px] ">
-                <div className="px-16 py-8 min-[400px]:px-auto sm:p-0 overflow-hidden absolute inset-0 z-0 bg-no-repeat bg-center bg-cover transition-transform duration-300 transform hover:scale-105  ">
+                
+                <div className="relative z-10">
                   <Link
-                    to={{ pathname: `/allProducts/${perfumesItem.title}` }}
-                    key={perfumesItem.id}
+                    to={{
+                      pathname: `/allProducts/${womenCollectionsItem.title}`,
+                    }}
+                    key={womenCollectionsItem.id}
                   >
-                    <img
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
                       loading="lazy"
-                      className="w-full h-full max-w-[400px] transition-transform duration-300 transform  hover:-translate-y-1 hover:scale-102 hover:motion-safe:animate-pulse object-cover opacity-50 hover:opacity-100"
-                      src={perfumesItem.imageSrc}
-                      alt={perfumesItem.title}
+                      className="max-w-32 lg:max-w-40 w-full h-auto object-contain drop-shadow-2xl"
+                      src={womenCollectionsItem.imageSrc}
+                      alt={womenCollectionsItem.title}
                     />
                   </Link>
                 </div>
-                <div className="flex transform flex-col gap-1 md:gap-2 mt-auto md:mr-auto md:pl-4 w-[270px]  items-center md:items-start md:justify-end">
-                  <h2 className=" text-center md:text-start text-lg md:text-2xl font-semibold font-inter">
-                    {i18n.t("featured.perfume.title")}
-                  </h2>
-                  <p className=" text-center md:text-start text-sm ">
-                    {i18n.t("featured.perfume.description")}
-                  </p>
-                  <Link
-                    to={{ pathname: `/allProducts/${perfumesItem.title}` }}
-                    key={perfumesItem.id}
-                  >
-                    <ShopNow />
-                  </Link>
-                </div>
               </div>
+            </motion.div>
+
+            {/* Bottom Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Speakers */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="relative card-interactive bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl overflow-hidden group h-[240px]"
+              >
+                <div className="relative h-full flex flex-col justify-between p-6">
+                  {/* Background pattern */}
+                  <div className="absolute inset-0 bg-pattern opacity-10"></div>
+                  
+                  <div className="relative z-10 text-white">
+                    <h3 className="text-lg lg:text-xl font-bold mb-2">
+                      {i18n.t("featured.speakers.title")}
+                    </h3>
+                    <p className="text-slate-300 mb-3 text-sm">
+                      {i18n.t("featured.speakers.description")}
+                    </p>
+                    <Link
+                      to={{ pathname: `/allProducts/${speakersItem.title}` }}
+                      key={speakersItem.id}
+                    >
+                      <ShopNow />
+                    </Link>
+                  </div>
+                  
+                  <div className="flex justify-center">
+                    <Link
+                      to={{ pathname: `/allProducts/${speakersItem.title}` }}
+                      key={speakersItem.id}
+                    >
+                      <motion.img
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        loading="lazy"
+                        className="max-w-24 lg:max-w-28 w-full h-auto object-contain drop-shadow-2xl"
+                        src={speakersItem.imageSrc}
+                        alt={speakersItem.title}
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Perfume */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="relative card-interactive bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl overflow-hidden group h-[240px]"
+              >
+                <div className="relative h-full flex flex-col justify-between p-6">
+                  {/* Background pattern */}
+                  <div className="absolute inset-0 bg-pattern opacity-10"></div>
+                  
+                  <div className="relative z-10 text-white">
+                    <h3 className="text-lg lg:text-xl font-bold mb-2">
+                      {i18n.t("featured.perfume.title")}
+                    </h3>
+                    <p className="text-slate-300 mb-3 text-sm">
+                      {i18n.t("featured.perfume.description")}
+                    </p>
+                    <Link
+                      to={{ pathname: `/allProducts/${perfumesItem.title}` }}
+                      key={perfumesItem.id}
+                    >
+                      <ShopNow />
+                    </Link>
+                  </div>
+                  
+                  <div className="flex justify-center">
+                    <Link
+                      to={{ pathname: `/allProducts/${perfumesItem.title}` }}
+                      key={perfumesItem.id}
+                    >
+                      <motion.img
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        loading="lazy"
+                        className="max-w-20 lg:max-w-24 w-full h-auto object-contain drop-shadow-2xl"
+                        src={perfumesItem.imageSrc}
+                        alt={perfumesItem.title}
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
+
 export default Featured;

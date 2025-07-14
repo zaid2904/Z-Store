@@ -2,16 +2,19 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import TopHeader from "../components/TopHeader/TopHeader";
 
 const Layout = () => {
   return (
-    <>
-      <TopHeader />
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <Header />
-      <Outlet />
+      
+      {/* Main content area with proper spacing */}
+      <main className="pt-16 md:pt-20">
+        <Outlet />
+      </main>
+      
       <Footer />
-    </>
+    </div>
   );
 };
 

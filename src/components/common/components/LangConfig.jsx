@@ -297,9 +297,9 @@ const resources = {
         title: "About",
         story: "Our Story",
         paragraph1:
-          "Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.",
+          "Launced in 2015, ZStore is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, ZStore has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.",
         paragraph2:
-          "Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging from consumer.",
+          "ZStore has more than 1 Million products to offer, growing at a very fast. ZStore offers a diverse assotment in categories ranging from consumer.",
         card1: "Sellers active on our site",
         card2: "Monthly Product Sales",
         card3: "Customers active on our site",
@@ -358,7 +358,7 @@ const resources = {
         login: "Log in",
       },
       loginPage: {
-        title: "Log in to Exclusive",
+        title: "Log in to ZStore",
         enter: "Enter your details below:",
         emailOrPhone: "Email or Phone Number",
         password: "Password",
@@ -436,7 +436,7 @@ const resources = {
         downloadApp: "Download App",
         save: "Save $3 with App New User Only",
         support: "Support",
-        address: "111 Bijoy sarani, Dhaka, DH 1515, Bangladesh",
+        address: "1247 Oak Street, San Francisco, CA 94102, United States",
         quickLinks: "Quick Links",
         privacy: "Privacy Policy",
         usage: "Terms Of Use",
@@ -744,9 +744,9 @@ const resources = {
         title: "Über",
         story: "Unsere Geschichte",
         paragraph1:
-          "Gestartet im Jahr 2015, ist Exclusive der führende Online-Shopping-Marktplatz Südasiens mit einer aktiven Präsenz in Bangladesch. Unterstützt von einer breiten Palette maßgeschneiderter Marketing-, Daten- und Service-Lösungen hat Exclusive 10.500 Verkäufer und 300 Marken und bedient 3 Millionen Kunden in der Region.",
+          "Gestartet im Jahr 2015, ist ZStore der führende Online-Shopping-Marktplatz Südasiens mit einer aktiven Präsenz in Bangladesch. Unterstützt von einer breiten Palette maßgeschneiderter Marketing-, Daten- und Service-Lösungen hat ZStore 10.500 Verkäufer und 300 Marken und bedient 3 Millionen Kunden in der Region.",
         paragraph2:
-          "Exclusive hat mehr als 1 Million Produkte im Angebot, die sehr schnell wachsen. Exclusive bietet eine vielfältige Auswahl in Kategorien, die von Verbraucher.",
+          "ZStore hat mehr als 1 Million Produkte im Angebot, die sehr schnell wachsen. ZStore bietet eine vielfältige Auswahl in Kategorien, die von Verbraucher.",
         card1: "Verkäufer aktiv auf unserer Website",
         card2: "Monatlicher Produktverkauf",
         card3: "Kunden aktiv auf unserer Website",
@@ -805,7 +805,7 @@ const resources = {
         login: "Einloggen",
       },
       loginPage: {
-        title: "Bei Exclusive anmelden",
+        title: "Bei ZStore anmelden",
         enter: "Geben Sie Ihre Daten unten ein:",
         emailOrPhone: "E-Mail oder Telefonnummer",
         password: "Passwort",
@@ -885,7 +885,7 @@ const resources = {
         downloadApp: "App herunterladen",
         save: "Sparen Sie 3 $ mit App Nur für neue Benutzer",
         support: "Unterstützung",
-        address: "111 Bijoy Sarani, Dhaka, DH 1515, Bangladesch",
+        address: "1247 Oak Street, San Francisco, CA 94102, Vereinigte Staaten",
         quickLinks: "Schnelle Links",
         privacy: "Datenschutz-Bestimmungen",
         usage: "Nutzungsbedingungen",
@@ -1181,9 +1181,9 @@ const resources = {
         title: "من نحن",
         story: "قصتنا",
         paragraph1:
-          "بدأت Exclusive في عام 2015، وهي السوق الرائدة للتسوق عبر الإنترنت في جنوب آسيا بوجود نشط في بنغلاديش. مدعومة بمجموعة واسعة من حلول التسويق والبيانات والخدمات المخصصة، يضم Exclusive 10،500 بائع و 300 علامة تجارية ويخدم 3 ملايين عميل في المنطقة.",
+          "بدأت ZStore في عام 2015، وهي السوق الرائدة للتسوق عبر الإنترنت في جنوب آسيا بوجود نشط في بنغلاديش. مدعومة بمجموعة واسعة من حلول التسويق والبيانات والخدمات المخصصة، يضم ZStore 10،500 بائع و 300 علامة تجارية ويخدم 3 ملايين عميل في المنطقة.",
         paragraph2:
-          "يقدم Exclusive أكثر من مليون منتج، وهو ينمو بسرعة كبيرة. يقدم Exclusive مجموعة متنوعة من الفئات التي تتراوح من المستهلك.",
+          "يقدم ZStore أكثر من مليون منتج، وهو ينمو بسرعة كبيرة. يقدم ZStore مجموعة متنوعة من الفئات التي تتراوح من المستهلك.",
         card1: "البائعين نشطون على موقعنا",
         card2: "مبيعات المنتجات الشهرية",
         card3: "العملاء نشطون على موقعنا",
@@ -1242,7 +1242,7 @@ const resources = {
         login: "تسجيل الدخول",
       },
       loginPage: {
-        title: "تسجيل الدخول إلى Exclusive",
+        title: "تسجيل الدخول إلى ZStore",
         enter: "أدخل بياناتك أدناه:",
         emailOrPhone: "البريد الإلكتروني أو رقم الهاتف",
         password: "كلمة المرور",
@@ -1632,9 +1632,9 @@ const resources = {
         title: "Sobre nosotros",
         story: "Nuestra historia",
         paragraph1:
-          "Exclusive comenzó en 2015, siendo el principal mercado de compras en línea en Asia del Sur con presencia activa en Bangladesh. Respaldado por una amplia gama de soluciones de marketing, datos y servicios personalizados, Exclusive cuenta con 10,500 vendedores y 300 marcas, y atiende a 3 millones de clientes en la región.",
+          "ZStore comenzó en 2015, siendo el principal mercado de compras en línea en Asia del Sur con presencia activa en Bangladesh. Respaldado por una amplia gama de soluciones de marketing, datos y servicios personalizados, ZStore cuenta con 10,500 vendedores y 300 marcas, y atiende a 3 millones de clientes en la región.",
         paragraph2:
-          "Exclusive ofrece más de un millón de productos y está creciendo rápidamente. Exclusive ofrece una variedad de categorías que van desde el consumidor.",
+          "ZStore ofrece más de un millón de productos y está creciendo rápidamente. ZStore ofrece una variedad de categorías que van desde el consumidor.",
         card1: "Vendedores activos en nuestro sitio",
         card2: "Ventas mensuales de productos",
         card3: "Clientes activos en nuestro sitio",
@@ -1693,7 +1693,7 @@ const resources = {
         login: "Iniciar sesión",
       },
       loginPage: {
-        title: "Iniciar sesión en Exclusive",
+        title: "Iniciar sesión en ZStore",
         enter: "Ingrese sus datos a continuación:",
         emailOrPhone: "Correo electrónico o número de teléfono",
         password: "Contraseña",
