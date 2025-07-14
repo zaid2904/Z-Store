@@ -23,7 +23,6 @@ function FooterComponent() {
             href="mailto:zaidsiddiqui7886@gmail.com"
             icon={BsEnvelope}
           />
-          <Footer.Icon href="#" icon={BsTelegram} />
           <Footer.Icon
             href=""
             icon={BsWhatsapp}
