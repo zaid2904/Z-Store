@@ -110,11 +110,11 @@ const LogIn = () => {
             </button>
           </div>
         </form>
-        <p className="text-gray-600 mx-auto">
+        <p className="text-readable-secondary mx-auto">
           <span>{i18n.t("loginPage.notHaveAccount")} </span>
           <Link
             to="/signUp"
-            className="ml-2 text-gray font-medium hover:underline"
+            className="ml-2 text-readable font-medium hover:underline hover:text-blue-600 dark:hover:text-blue-400"
           >
             {i18n.t("signUpPage.title")}
           </Link>

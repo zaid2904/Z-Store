@@ -11,7 +11,7 @@ const Row1 = () => {
   return (
     <div className="flex flex-row ">
       {/* Left Sidebar */}
-      <div className=" text-gray-700 w-64 flex-shrink-0 hidden xl:block">
+      <div className="text-readable w-64 flex-shrink-0 hidden xl:block bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
         <nav className="py-6">
           <ul>
             <li className="px-4 py-2 cursor-pointer hover:underline hover:underline-offset-8   ease-in-out  duration-300 transform hover:translate-x-4">

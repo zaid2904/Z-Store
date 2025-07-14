@@ -94,7 +94,7 @@ const ReadmeComponent = () => {
                 variant={isMobile ? "body2" : "body1"}
                 textAlign="center"
                 paragraph
-                className="text-gray-800"
+                className="text-readable"
                 style={{ fontSize: isMobile ? ".9rem" : "1.25rem" }}
               >
                 ⚡ Hi, I'm Siddiqui Zaid — a passionate React.js developer and final-year IT engineering student.
@@ -103,7 +103,7 @@ const ReadmeComponent = () => {
                 variant={isMobile ? "body2" : "body1"}
                 textAlign="center"
                 paragraph
-                className="text-gray-800"
+                className="text-readable"
                 style={{ fontSize: isMobile ? "1rem" : "1.25rem" }}
               >
                 Z Store is a modern e-commerce website built using React, Vite, Tailwind CSS, Firebase, React Router, and Context API.
@@ -111,7 +111,7 @@ const ReadmeComponent = () => {
               <Divider />
               <Typography
                 paragraph
-                className="text-gray-800"
+                className="text-readable"
                 style={{
                   fontSize: isMobile ? "1rem" : "1.25rem",
                   marginTop: "1rem",
@@ -120,7 +120,7 @@ const ReadmeComponent = () => {
               >
                 Key Features:
               </Typography>
-              <ul className="flex flex-col gap-2 ml-3 md:ml-6 mb-4 text-sm md:text-base text-gray-800 list-none">
+              <ul className="flex flex-col gap-2 ml-3 md:ml-6 mb-4 text-sm md:text-base text-readable list-none">
                 <li>✅ Multi-language support (English, Hindi, Gujarati, Urdu)</li>
                 <li>✅ Fast product search and filtering</li>
                 <li>✅ Secure Firebase authentication</li>

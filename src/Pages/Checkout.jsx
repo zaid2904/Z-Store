@@ -87,9 +87,9 @@ const Checkout = () => {
                 {i18n.t("checkOut.billingDetails")}
               </span>
 
-              <div className="flex flex-col gap-4 md:gap-8 w-[300px] md:w-[470px]">
+              <div className="flex flex-col gap-4 md:gap-8 w-full max-w-[470px]">
                 <div className="flex flex-col gap-1">
-                  <span className="text-sm md:text-base text-gray-400">
+                  <span className="text-sm md:text-base text-form-label">
                     {i18n.t("checkOut.firstName")} *
                   </span>
                   <input
@@ -98,11 +98,11 @@ const Checkout = () => {
                     required
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    className=" rounded bg-gray-100 bg-opacity-100 px-4 py-3 text-gray-400 text-sm md:text-base focus:border outline-none focus:border-gray-300  "
+                    className="w-full rounded bg-gray-100 dark:bg-gray-700 px-4 py-3 text-form-input text-sm md:text-base focus:border focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="text-sm md:text-base text-gray-400">
+                  <span className="text-sm md:text-base text-form-label">
                     {i18n.t("checkOut.company")}
                   </span>
                   <input
@@ -110,11 +110,11 @@ const Checkout = () => {
                     placeholder=""
                     required
                     // onChange={(e) => setNewPassword(e.target.value)}
-                    className=" rounded bg-gray-100 bg-opacity-100 px-4 py-3 text-gray-400 text-sm md:text-base focus:border outline-none focus:border-gray-300  "
+                    className="w-full rounded bg-gray-100 dark:bg-gray-700 px-4 py-3 text-form-input text-sm md:text-base focus:border focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="text-sm md:text-base text-gray-400">
+                  <span className="text-sm md:text-base text-form-label">
                     {i18n.t("checkOut.address")} *
                   </span>
                   <input
@@ -123,11 +123,11 @@ const Checkout = () => {
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     required
-                    className=" rounded bg-gray-100 bg-opacity-100 px-4 py-3 text-gray-400 text-sm md:text-base focus:border outline-none focus:border-gray-300  "
+                    className="w-full rounded bg-gray-100 dark:bg-gray-700 px-4 py-3 text-form-input text-sm md:text-base focus:border focus:border-blue-500 dark:focus:border-blue-400 outline-none transition-colors"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="text-sm md:text-base text-gray-400">
+                  <span className="text-sm md:text-base text-form-label">
                     {i18n.t("checkOut.apartment")}
                   </span>
                   <input

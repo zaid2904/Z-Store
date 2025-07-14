@@ -33,14 +33,14 @@ const Payment = () => {
         <div className="mb-4">
           <label
             htmlFor="cardNumber"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-form-label mb-2"
           >
             {i18n.t("payment.number")}
           </label>
           <input
             type="text"
             id="cardNumber"
-            className="mt-1 p-2 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+            className="mt-1 p-2 block w-full border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 shadow-sm bg-white dark:bg-gray-700 text-form-input"
             value={paymentInfo.cardNumber}
             onChange={(e) =>
               setPaymentInfo({ ...paymentInfo, cardNumber: e.target.value })
@@ -51,14 +51,14 @@ const Payment = () => {
         <div className="mb-4">
           <label
             htmlFor="expDate"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-form-label mb-2"
           >
             {i18n.t("payment.expirationDate")}
           </label>
           <input
             type="text"
             id="expDate"
-            className="mt-1 p-2 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+            className="mt-1 p-2 block w-full border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 shadow-sm bg-white dark:bg-gray-700 text-form-input"
             value={paymentInfo.expDate}
             onChange={(e) =>
               setPaymentInfo({ ...paymentInfo, expDate: e.target.value })
@@ -69,7 +69,7 @@ const Payment = () => {
         <div className="mb-4">
           <label
             htmlFor="cvv"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-form-label mb-2"
           >
             CVV
           </label>

@@ -68,35 +68,34 @@ const Product = () => {
   return (
     <>
       {selectedProduct ? (
-        <div className="flex flex-col mx-4 md:mx-32 mt-48">
-          <div className="mx-auto  flex flex-col gap-10">
+        <div className="flex flex-col mx-4 sm:mx-6 md:mx-8 lg:mx-32 mt-24 md:mt-48">
+          <div className="mx-auto w-full max-w-7xl flex flex-col gap-6 md:gap-10">
             <ActiveLastBreadcrumb
               path={`${i18n.t("footer.myAccount")}/${selectedProduct.type}/${
                 selectedProduct.title
               }`}
             />
-            <div className="flex flex-col md:flex-row  gap-16">
-              <div className="flex flex-col-reverse md:flex-row gap-8">
-                <div className="flex  flex-row md:flex-col gap-4">
+            <div className="flex flex-col lg:flex-row gap-8 md:gap-16">
+              <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-8 w-full lg:w-auto">
+                <div className="flex flex-row md:flex-col gap-2 md:gap-4 justify-center md:justify-start">
                   {[...Array(4)].map((_, index) => (
                     <motion.div
                       role="button"
                       key={index}
-                      className="relative flex items-center justify-center bg-zinc-100 rounded md:pt-12 md:p-8 md:h-[138px] md:w-[170px]"
+                      className="relative flex items-center justify-center bg-zinc-100 dark:bg-zinc-800 rounded p-2 md:p-4 lg:p-8 h-16 w-16 md:h-24 md:w-24 lg:h-[138px] lg:w-[170px]"
                       onClick={handleImageClick}
-                      whileHover={{ scale: 1.15 }}
-                      whileTap={{ scale: 0.8 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       <img
                         src={selectedProduct.imageSrc}
                         alt={selectedProduct.title}
-                        className="transform transition-transform duration-300 hover:scale-105 focus:outline-none w-full h-full"
+                        className="transform transition-transform duration-300 hover:scale-105 focus:outline-none w-full h-full object-contain"
                       />
                     </motion.div>
                   ))}
                 </div>
                 {/* Main image */}
-                {/* <button> */}
                 <motion.div
                   role="button"
                   className="relative flex items-center justify-center bg-zinc-100 w-full rounded md:pt-12 md:p-8 md:h-[600px] md:w-[500px]"
@@ -112,10 +111,10 @@ const Product = () => {
               </div>
               <div className="flex gap-5 flex-col">
                 <div className="flex gap-4 flex-col">
-                  <h2 className="text-xl md:text-2xl font-bold ">
+                  <h2 className="text-xl md:text-2xl font-bold text-readable">
                     {selectedProduct.title}
                   </h2>
-                  <div className="flex  text-gray-500 text-sm gap-2 items-center ">
+                  <div className="flex text-readable-muted text-sm gap-2 items-center">
                     {renderStars()}
                     <span>
                       ({selectedProduct.rates} {i18n.t("productPage.reviews")})
@@ -126,7 +125,7 @@ const Product = () => {
                     </span>
                   </div>
                   <div className="flex gap-10">
-                    <p className="text-gray-800 text-xl md:text-2xl font-inter">
+                    <p className="text-readable text-xl md:text-2xl font-inter">
                       ${selectedProduct.price}.00
                     </p>
                     <RatingComp
@@ -134,7 +133,7 @@ const Product = () => {
                       item={selectedProduct}
                     />{" "}
                   </div>
-                  <p className="text-gray-800 w-full md:w-[373px] text-xs md:text-sm">
+                  <p className="text-readable-secondary w-full md:w-[373px] text-xs md:text-sm">
                     {selectedProduct.details}
                   </p>
                 </div>
